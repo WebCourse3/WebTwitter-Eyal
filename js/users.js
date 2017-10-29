@@ -1,28 +1,56 @@
 
+var users = ['Eyal Azran', 'Liron Azran', 'Amir Azran', 'Liraz Azran'];
 
-var users = ['Orel Zluf 1', 'Orel Zluf 2',
-    'Orel Zluf 3', 'Orel Zluf 4',
-    'Orel Zluf 5', 'Orel Zluf 6',
-    'Orel Zluf 7', 'Orel Zluf 8',
-    'Orel Zluf 9', 'Orel Zluf 10'];
+var followees = ['Dad', 'Mom'];
 
-var followees = ['Orel Zluf 11', 'Orel Zluf 12'];
+var filterUsers = [];
 
+// This function runs when the page starts
+function Init(){
 
-function Visible(username){
-    var user = document.getElementById(username);
-    user.classList.add("invisible");
+    // refreshes the page and rearrange users
+    refresh();
 }
 
-function Init(){
-    refresh();
+// refreshes the page and rearrange users
+function refresh(){
+
+    // find all users in page
+    var allUsers = document.getElementsByName("user");
+
+    // Remove all users div
+    if (allUsers.length != 0){
+        for (var index = allUsers.length-1; index >= 0; index--){
+            allUsers[index].remove();
+        }
+    }
+
+    // redisplay all users
+    showAllUsers();
+
+    // redisplay all followees
+    showAllFollowees();
 }
 
 function showAllUsers(){
 
-    users.forEach(function(username){
-        showUser(username, "showAllUsers", "Follow");
-    });
+    // read the filter text
+    var filterText = document.getElementById('filterText');
+
+    // If Filtered
+    if (filterText.value != ""){
+        filter(filterText.value);
+
+        filterUsers.forEach(function(username){
+            showUser(username, "showAllUsers", "Follow");
+        });
+
+    }
+    else {
+        users.forEach(function (username) {
+            showUser(username, "showAllUsers", "Follow");
+        });
+    }
 }
 
 function showAllFollowees(){
@@ -32,6 +60,7 @@ function showAllFollowees(){
     });
 }
 
+// display user and sets it in the USERS or FOLLOWEES groups
 function showUser(username, container, status){
 
     var allUsersDiv = document.getElementById(container);
@@ -57,7 +86,7 @@ function showUser(username, container, status){
 
     // Image
     var newImage = document.createElement("img");
-    newImage.src = "images/useravatar.png";
+    newImage.src = "../images/useravatar.png";
     rowDiv.appendChild(newImage);
 
     rowDiv = document.createElement("div");
@@ -69,8 +98,6 @@ function showUser(username, container, status){
     newButton.addEventListener("click", function(){
         followButtonClick(this)
     });
-
-    //newButton.onclick = followButtonClick(this);
 
     newButton.name = username;
 
@@ -96,22 +123,7 @@ function showUser(username, container, status){
     rowDiv.appendChild(userNameDiv);
 }
 
-function refresh(){
 
-    var allUsers = document.getElementsByName("user");
-
-    //allUsers.innerHTML = "";
-
-    if (allUsers.length != 0){
-        for (var index = allUsers.length-1; index >= 0; index--){
-            allUsers[index].remove();
-        }
-    }
-
-    showAllUsers();
-    showAllFollowees();
-
-}
 
 function followButtonClick(obj){
 
@@ -137,37 +149,25 @@ function followButtonClick(obj){
 
 function filter(filterName){
 
-    var allUsers = document.getElementById("showAllUsers").childNodes;
+    filterUsers = [];
 
-    allUsers.forEach(function(currUser){
-        // if(currUser.id.startsWith(filterName)){
-        // 	currUser.classList.add("invisible");
-        // }
-        // else{
-        // 	currUser.classList.remove("invisible");
-        // }
+    users.forEach(function(currUser){
+
+        // Fill the filter array with the relevant users
+        if (currUser != null) {
+
+            if (currUser.startsWith(filterName)) {
+                filterUsers.push(currUser);
+            }
+            else {
+                var index = filterUsers.indexOf(currUser);
+                if(index >= 0){
+                    filterUsers.splice(index, 1);
+
+                }
+            }
+        }
     });
-
-    // var allUsersDiv = document.querySelectorAll("div[title='userName']");
-    //
-    // allUsersDiv.forEach(function(currUserDiv){
-    //
-    // 	var selecteduserNameDiv = currUserDiv.parentNode;
-    // 	var selectedUserDiv = selecteduserNameDiv.parentNode;
-    //
-    // 	if (selectedUserDiv.parentNode["id"] == "showAllUsers") {
-    //
-    // 		if (currUserDiv.innerHTML.startsWith(filterName)) {
-    //
-    // 			selectedUserDiv.style.visibility = 'visible';
-    //
-    // 			console.log(selectedUserDiv.parentNode["id"]);
-    // 		}
-    // 		else {
-    // 			selectedUserDiv.style.visibility = 'hidden';
-    // 		}
-    // 	}
-    // });
 }
 
 
