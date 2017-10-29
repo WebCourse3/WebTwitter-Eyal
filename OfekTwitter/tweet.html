@@ -17,6 +17,9 @@
         <!-- Latest compiled JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+        <!-- Project CSS file -->
+        <script src="../css/general.css"></script>
+
     </head>
 
     <body>
@@ -28,33 +31,21 @@
                     <div class="navbar-header">
                         <a class="navbar-brand" href="#">OfekTweeter</a>
                     </div>
-                    <ul class="nav navbar-nav">
-                        <li class="active"><a href="#">Home</a></li>
-                        <li class="dropdown">
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1
-                                <span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Page 1-1</a></li>
-                                <li><a href="#">Page 1-2</a></li>
-                                <li><a href="#">Page 1-3</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">Page 2</a></li>
-                        <li><a href="#">Page 3</a></li>
-                    </ul>
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Users</a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Sign In</a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-star-empty"></span> Sign Up</a></li>
                     </ul>
                 </div>
             </nav>
         </div>
 
+        <!-- Text box - insert new tweet -->
         <div class="container">
             <div class="col-md-8">
                 <form>
                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Tweet">
+                        <input type="text" class="form-control" placeholder="Filter by user name" onkeyup="filter(this.value)>
                         <div class="input-group-btn">
                             <button class="btn btn-default" type="submit">
                                 <i class="glyphicon glyphicon-send"></i>
@@ -65,7 +56,29 @@
             </div>
         </div>
 
-        <!-- input fields -->
+        <!-- Text box - insert new tweet -->
+        <div class="row">
+            <div id="allTweets" class="col-md-6">
+
+                <!--
+
+                            <div class="row top-buffer">
+                                <div class="col-md-2">
+                                    <img src="images/useravatar.png"/>
+                                </div>
+                                <div id="username" class="text-bold">Orel Zluf says:</div>
+                                <div id="text">Bla Bla Bla...</div>
+                            </div>
+
+                -->
+
+            </div>
+        </div>
+
+
+
+
+        <!-- ********* Tests ************** -->
         <br>
         <div class="container">
             <form class="form-horizontal">
