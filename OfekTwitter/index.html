@@ -42,17 +42,17 @@
 
 <!-- Text box - insert new tweet -->
 <div class="container">
-    <div class="row col-md-8">
-        <form>
-            <div class="input-group">
-                <input id="tweet-text-box" type="text" class="form-control" placeholder="Tweet">
-                <div class="input-group-btn">
-                    <button class="btn btn-default" type="submit" onclick="addTweet()">
-                        <i class="glyphicon glyphicon-send"></i>
-                    </button>
-                </div>
-            </div>
-        </form>
+    <div class="row">
+        <div class="container form-group">
+	        <div class="col-md-8">
+		        <input id="tweet-text-box" type="text" class="form-control col-md-6" placeholder="Tweet">
+	        </div>
+	        <div class="col-md-4">
+		        <button class="btn btn-default col-md-2" onclick="addTweet()">
+			        <i class="glyphicon glyphicon-send"></i>
+		        </button>
+	        </div>
+        </div>
     </div>
 </div>
 
@@ -63,7 +63,6 @@
 
     </div>
 </div>
-
 
 <script src="../js/index.js"></script>
 

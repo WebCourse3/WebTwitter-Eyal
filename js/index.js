@@ -1,9 +1,11 @@
+// holds all tweets in JSON format
 var tweets = [
     {username: 'Bobo', text: 'hello followers!'},
     {username: 'Elvis', text: 'this exercise is really easy!'},
     {username: 'Mimi', text: 'I want to go to sleep'}
 ];
 
+// add new tweet to tweets JSON
 function addTweet(){
 
     var text = document.getElementById("tweet-text-box");
