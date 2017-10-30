@@ -1,8 +1,10 @@
-
+// holds all users
 var users = ['Eyal Azran', 'Liron Azran', 'Amir Azran', 'Liraz Azran'];
 
+// holds all folowees. mutually exclusive with users
 var followees = ['Dad', 'Mom'];
 
+// holds only the filtered users, doesn't remove from users
 var filterUsers = [];
 
 // This function runs when the page starts
