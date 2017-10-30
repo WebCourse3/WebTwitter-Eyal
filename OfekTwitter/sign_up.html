@@ -1,150 +1,72 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>OfekTwitter | Users</title>
-    <link rel='stylesheet' type='text/css' href="../css/users.css"/>
+
+    <meta charset="UTF-8">
+    <title>Tweet</title>
+
+    <!-- To ensure proper rendering and touch zooming -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- Project CSS file -->
+    <link rel="stylesheet" href="../css/general.css"></link>
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 </head>
 <body>
-<header>
-    <nav class="ot-nav">
-        <div class="logo">
-            <img src="../images/ofek.png"/>
+
+<div class="container">
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.html">OfekTweeter</a>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="users.html"><span class="glyphicon glyphicon-user"></span> Users</a></li>
+                <li><a href="sign_in.html"><span class="glyphicon glyphicon-log-in"></span> Sign In</a></li>
+                <li><a href="sign_up.html"><span class="glyphicon glyphicon-star-empty"></span> Sign Up</a></li>
+            </ul>
         </div>
-        <div class="logo header-btn">
-            <a href='/'>OfekTwitter</a>
-        </div>
-        <ul>
-            <li class="header-btn">
-                <a href='sign_in.html'>Sign in</a>
-            </li>
-            <li class="header-btn">
-                <a href='sign_up.html'>Sign up</a>
-            </li>
-            <li class="header-btn">
-                <a href='users.html'>Users</a>
-            </li>
-        </ul>
-        <br class="clearFix"/>
     </nav>
-</header>
-
-<div class="ot-body">
-    <div>
-        <div>
-            <span>Filter by </span>
-            <input type="text" placeholder="user name"/>
-            <button>ok</button>
-        </div>
-        <div class="user-gallery pull-left">
-            <div class="row">
-                <div class="cell user-cell pull-left">
-                    <div class="user-avatar-img">
-                        <img src="../images/useravatar.png"/>
-                    </div>
-                    <div>
-                        <button>follow</button>
-                    </div>
-                    <div class="user-cell-name">
-                        <p>Marty McFly</p>
-                    </div>
-                </div>
-                <div class="cell user-cell pull-left">
-                    <div class="user-avatar-img">
-                        <img src="../images/useravatar.png"/>
-                    </div>
-                    <div>
-                        <button>follow</button>
-                    </div>
-                    <div class="user-cell-name">
-                        <p>James Bond</p>
-                    </div>
-                </div>
-                <div class="cell user-cell pull-left">
-                    <div class="user-avatar-img">
-                        <img src="../images/useravatar.png"/>
-                    </div>
-                    <div>
-                        <button>unfollow</button>
-                    </div>
-                    <div class="user-cell-name">
-                        <p>Janis Joplin</p>
-                    </div>
-                </div>
-                <div class="cell user-cell pull-left">
-                    <div class="user-avatar-img">
-                        <img src="../images/useravatar.png"/>
-                    </div>
-                    <div>
-                        <button>follow</button>
-                    </div>
-                    <div class="user-cell-name">
-                        <p>Mark Twain</p>
-                    </div>
-                </div>
-                <div class="cell user-cell pull-left">
-                    <div class="user-avatar-img">
-                        <img src="../images/useravatar.png"/>
-                    </div>
-                    <div>
-                        <button>unfollow</button>
-                    </div>
-                    <div class="user-cell-name">
-                        <p>Albert Einstein</p>
-                    </div>
-                </div>
-                <div class="cell user-cell pull-left">
-                    <div class="user-avatar-img">
-                        <img src="../images/useravatar.png"/>
-                    </div>
-                    <div>
-                        <button>follow</button>
-                    </div>
-                    <div class="user-cell-name">
-                        <p>Frodo</p>
-                    </div>
-                </div>
-                <div class="cell user-cell pull-left">
-                    <div class="user-avatar-img">
-                        <img src="../images/useravatar.png"/>
-                    </div>
-                    <div>
-                        <button>follow</button>
-                    </div>
-                    <div class="user-cell-name">
-                        <p>Bill Gates</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="pull-right followees-list">
-        <h2>Followees</h2>
-        <div class="cell user-cell followee-cell">
-            <div class="user-avatar-img">
-                <img src="../images/useravatar.png"/>
-            </div>
-            <div>
-                <button>unfollow</button>
-            </div>
-            <div class="user-cell-name">
-                <p>Albert Einstein</p>
-            </div>
-        </div>
-        <div class="cell user-cell followee-cell">
-            <div class="user-avatar-img">
-                <img src="../images/useravatar.png"/>
-            </div>
-            <div>
-                <button>unfollow</button>
-            </div>
-            <div class="user-cell-name">
-                <p>Janis Joplin</p>
-            </div>
-        </div>
-    </div>
-    <br class="clearFix"/>
 </div>
+
+<br>
+
+<div class="container">
+    <form class="form-horizontal">
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="username">Username:</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" id="username" placeholder="Enter username">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="pwd">Password:</label>
+            <div class="col-sm-4">
+                <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="repeat-pwd">Repeat Password:</label>
+            <div class="col-sm-4">
+                <input type="password" class="form-control" id="repeat-pwd" placeholder="Repeat password">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-default">Sign Up</button>
+            </div>
+        </div>
+    </form>
+</div>
+
 </body>
 </html>

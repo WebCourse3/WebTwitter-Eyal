@@ -6,22 +6,22 @@ var tweets = [
 
 function addTweet(){
 
-    var text = document.getElementById("comment");
-    var newTweet = {username: 'Orel Zluf', text: text.value};
+    var text = document.getElementById("tweet-text-box");
+    var newTweet = {username: 'Eyal Azran', text: text.value};
 
     tweets.push(newTweet);
 
-    showNewTweet(newTweet);
+    showTweet(newTweet);
 }
 
 function showAllTweets(){
 
     tweets.forEach(function(currUser){
-        showNewTweet(currUser);
+        showTweet(currUser);
     });
 }
 
-function showNewTweet(currUser){
+function showTweet(currUser){
 
     var allTweetsDiv = document.getElementById("allTweets");
 
@@ -40,7 +40,7 @@ function showNewTweet(currUser){
 
     // Create the image element
     var newImage = document.createElement("img");
-    newImage.src = "images/useravatar.png";
+    newImage.src = "../images/useravatar.png";
 
     imageDiv.appendChild(newImage);
 
