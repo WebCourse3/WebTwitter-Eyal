@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Tweet</title>
+
+        <!-- To ensure proper rendering and touch zooming -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <!-- Project CSS file -->
+        <script src="../css/general.css"></script>
+
+    </head>
+
+    <body>
+
+        <!-- navigation bar -->
+        <div class="container">
+            <nav class="navbar navbar-inverse">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="index.html">OfekTweeter</a>
+                    </div>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="users.html"><span class="glyphicon glyphicon-user"></span> Users</a></li>
+                        <li><a href="sign_in.html"><span class="glyphicon glyphicon-log-in"></span> Sign In</a></li>
+                        <li><a href="sign_up.html"><span class="glyphicon glyphicon-star-empty"></span> Sign Up</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+
+
+        <!-- Text box - insert new tweet -->
+        <div class="row">
+            <div id="allTweets" class="col-md-6">
+
+                <!--
+
+                            <div class="row top-buffer">
+                                <div class="col-md-2">
+                                    <img src="images/useravatar.png"/>
+                                </div>
+                                <div id="username" class="text-bold">Orel Zluf says:</div>
+                                <div id="text">Bla Bla Bla...</div>
+                            </div>
+
+                -->
+
+            </div>
+        </div>
+
+
+
+
+        <!-- ********* Tests ************** -->
+        <br>
+        <div class="container">
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="email">Email:</label>
+                    <div class="col-sm-4">
+                        <input type="email" class="form-control" id="email" placeholder="Enter email">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="pwd">Password:</label>
+                    <div class="col-sm-4">
+                        <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <div class="checkbox">
+                            <label><input type="checkbox"> Remember me</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-default">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <!-- games -->
+        <br>
+        <div class="container">
+
+            <div class="row">
+                <div class="col-md-4">
+
+                        <a href="#">
+                            <img src="../images/ofek.png" alt="Lights" style="width:100%">
+                            <div class="caption">
+                                <p>ofek logo</p>
+                            </div>
+                        </a>
+
+                </div>
+                <div class="col-md-4">
+
+                        <a href="#">
+                            <img src="../images/useravatar.png" alt="Nature" style="width:100%">
+                            <div class="caption">
+                                <p>avatar</p>
+                            </div>
+                        </a>
+
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-md-10">
+                    <button type="button" class="btn btn-block">Basic</button>
+                    <button type="button" class="btn btn-default disabled">Default</button>
+                    <button type="button" class="btn btn-primary btn-lg">Primary</button>
+                    <button type="button" class="btn btn-success">Success</button>
+                    <button type="button" class="btn btn-info">Info</button>
+                    <button type="button" class="btn btn-warning btn-lg">Warning</button>
+                    <button type="button" class="btn btn-danger">Danger</button>
+                    <button type="button" class="btn btn-link">Link</button>
+                </div>
+            </div>
+
+            <div class=row">
+                <div class="col-md-2">
+                    <p>Envelope icon: <span class="glyphicon glyphicon-envelope"></span></p>
+                </div>
+
+                <div class="col-md-2">
+                    <button type="button" class="btn btn-default">
+                        <span class="glyphicon glyphicon-search"></span> Search
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+        <script src="../js/games.js"></script>
+
+    </body>
+
+</html>

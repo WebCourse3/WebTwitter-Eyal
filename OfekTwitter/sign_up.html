@@ -1,77 +1,71 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>OfekTwitter</title>
+    <meta charset="UTF-8">
+    <title>Tweet</title>
+
+    <!-- To ensure proper rendering and touch zooming -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel='stylesheet' type='text/css' href="../css/bootstrap/bootstrap.min.css"/>
-    <link rel='stylesheet' type='text/css' href="../css/sign_up.css"/>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- Project CSS file -->
+    <link rel="stylesheet" href="../css/general.css"></link>
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 </head>
 <body>
 
-<div style="width:300px">
-<div class="row">
-    <div class="col-md-2">text</div>
-    <div class="col-md-2"><input /></div>
-</div>
-</div>
-
-
-<header>
-    <nav class="ot-nav">
-        <div class="logo">
-            <img src="../images/ofek.png"/>
+<div class="container">
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.html">OfekTweeter</a>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="users.html"><span class="glyphicon glyphicon-user"></span> Users</a></li>
+                <li><a href="sign_in.html"><span class="glyphicon glyphicon-log-in"></span> Sign In</a></li>
+                <li><a href="sign_up.html"><span class="glyphicon glyphicon-star-empty"></span> Sign Up</a></li>
+            </ul>
         </div>
-        <div class="logo header-btn">
-            <a href='index.html'>OfekTwitter</a>
-        </div>
-        <ul>
-            <li class="header-btn">
-                <a href='sign_in.html'>Sign in</a>
-            </li>
-            <li class="header-btn">
-                <a href='sign_up.html'>Sign up</a>
-            </li>
-            <li class="header-btn">
-                <a href='users.html'>Users</a>
-            </li>
-        </ul>
-        <br class="clearFix"/>
     </nav>
-</header>
+</div>
 
+<br>
 
 <div class="container">
-    <h2>Sign Up</h2>
-    <form class="form-horizontal" action="/action_page.php">
-
+    <form class="form-horizontal">
         <div class="form-group">
-            <label class="control-label col-xs-2" for="username">Username:</label>
-            <div class="col-xs-10">
-                <input type="text" class="form-control" id="username" placeholder="Username" name="username">
+            <label class="control-label col-sm-2" for="username">Username:</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" id="username" placeholder="Enter username">
             </div>
         </div>
         <div class="form-group">
-            <label class="control-label col-md-2" for="pwd">Password:</label>
-            <div class="col-md-10">
-                <input type="password" class="form-control" id="pwd" placeholder="Password" name="pwd">
+            <label class="control-label col-sm-2" for="pwd">Password:</label>
+            <div class="col-sm-4">
+                <input type="password" class="form-control" id="pwd" placeholder="Enter password">
             </div>
         </div>
         <div class="form-group">
-            <label class="control-label col-md-2" for="pwd">Confirm Password:</label>
-            <div class="col-md-10">
-                <input type="password" class="form-control" id="confirm-pwd" placeholder="Confirm Password" name="confirm-pwd">
+            <label class="control-label col-sm-2" for="repeat-pwd">Repeat Password:</label>
+            <div class="col-sm-4">
+                <input type="password" class="form-control" id="repeat-pwd" placeholder="Repeat password">
             </div>
         </div>
         <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <button type="submit" class="btn btn-default">login</button>
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-default">Sign Up</button>
             </div>
         </div>
     </form>
 </div>
-
-
-
 
 </body>
 </html>
