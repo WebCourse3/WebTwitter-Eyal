@@ -1,18 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>OfekTwitter | Users</title>
-    <link rel='stylesheet' type='text/css' href="../css/users.css"/>
-
+    <title>OfekTwitter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='stylesheet' type='text/css' href="../css/bootstrap/bootstrap.min.css"/>
+    <link rel='stylesheet' type='text/css' href="../css/sign_up.css"/>
 </head>
 <body>
+
+<div style="width:300px">
+<div class="row">
+    <div class="col-md-2">text</div>
+    <div class="col-md-2"><input /></div>
+</div>
+</div>
+
+
 <header>
     <nav class="ot-nav">
         <div class="logo">
             <img src="../images/ofek.png"/>
         </div>
         <div class="logo header-btn">
-            <a href='/'>OfekTwitter</a>
+            <a href='index.html'>OfekTwitter</a>
         </div>
         <ul>
             <li class="header-btn">
@@ -29,122 +39,39 @@
     </nav>
 </header>
 
-<div class="ot-body">
-    <div>
-        <div>
-            <span>Filter by </span>
-            <input type="text" placeholder="user name"/>
-            <button>ok</button>
-        </div>
-        <div class="user-gallery pull-left">
-            <div class="row">
-                <div class="cell user-cell pull-left">
-                    <div class="user-avatar-img">
-                        <img src="../images/useravatar.png"/>
-                    </div>
-                    <div>
-                        <button>follow</button>
-                    </div>
-                    <div class="user-cell-name">
-                        <p>Marty McFly</p>
-                    </div>
-                </div>
-                <div class="cell user-cell pull-left">
-                    <div class="user-avatar-img">
-                        <img src="../images/useravatar.png"/>
-                    </div>
-                    <div>
-                        <button>follow</button>
-                    </div>
-                    <div class="user-cell-name">
-                        <p>James Bond</p>
-                    </div>
-                </div>
-                <div class="cell user-cell pull-left">
-                    <div class="user-avatar-img">
-                        <img src="../images/useravatar.png"/>
-                    </div>
-                    <div>
-                        <button>unfollow</button>
-                    </div>
-                    <div class="user-cell-name">
-                        <p>Janis Joplin</p>
-                    </div>
-                </div>
-                <div class="cell user-cell pull-left">
-                    <div class="user-avatar-img">
-                        <img src="../images/useravatar.png"/>
-                    </div>
-                    <div>
-                        <button>follow</button>
-                    </div>
-                    <div class="user-cell-name">
-                        <p>Mark Twain</p>
-                    </div>
-                </div>
-                <div class="cell user-cell pull-left">
-                    <div class="user-avatar-img">
-                        <img src="../images/useravatar.png"/>
-                    </div>
-                    <div>
-                        <button>unfollow</button>
-                    </div>
-                    <div class="user-cell-name">
-                        <p>Albert Einstein</p>
-                    </div>
-                </div>
-                <div class="cell user-cell pull-left">
-                    <div class="user-avatar-img">
-                        <img src="../images/useravatar.png"/>
-                    </div>
-                    <div>
-                        <button>follow</button>
-                    </div>
-                    <div class="user-cell-name">
-                        <p>Frodo</p>
-                    </div>
-                </div>
-                <div class="cell user-cell pull-left">
-                    <div class="user-avatar-img">
-                        <img src="../images/useravatar.png"/>
-                    </div>
-                    <div>
-                        <button>follow</button>
-                    </div>
-                    <div class="user-cell-name">
-                        <p>Bill Gates</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <div class="pull-right followees-list">
-        <h2>Followees</h2>
-        <div class="cell user-cell followee-cell">
-            <div class="user-avatar-img">
-                <img src="../images/useravatar.png"/>
-            </div>
-            <div>
-                <button>unfollow</button>
-            </div>
-            <div class="user-cell-name">
-                <p>Albert Einstein</p>
+<div class="container">
+    <h2>Sign Up</h2>
+    <form class="form-horizontal" action="/action_page.php">
+
+        <div class="form-group">
+            <label class="control-label col-xs-2" for="username">Username:</label>
+            <div class="col-xs-10">
+                <input type="text" class="form-control" id="username" placeholder="Username" name="username">
             </div>
         </div>
-        <div class="cell user-cell followee-cell">
-            <div class="user-avatar-img">
-                <img src="../images/useravatar.png"/>
-            </div>
-            <div>
-                <button>unfollow</button>
-            </div>
-            <div class="user-cell-name">
-                <p>Janis Joplin</p>
+        <div class="form-group">
+            <label class="control-label col-md-2" for="pwd">Password:</label>
+            <div class="col-md-10">
+                <input type="password" class="form-control" id="pwd" placeholder="Password" name="pwd">
             </div>
         </div>
-    </div>
-    <br class="clearFix"/>
+        <div class="form-group">
+            <label class="control-label col-md-2" for="pwd">Confirm Password:</label>
+            <div class="col-md-10">
+                <input type="password" class="form-control" id="confirm-pwd" placeholder="Confirm Password" name="confirm-pwd">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <button type="submit" class="btn btn-default">login</button>
+            </div>
+        </div>
+    </form>
 </div>
+
+
+
+
 </body>
 </html>
